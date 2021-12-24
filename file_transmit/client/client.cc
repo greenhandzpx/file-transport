@@ -132,14 +132,15 @@ int main(int argc, char* argv[])
 {
     LOG_INFO << "pid = " << getpid();
     if (argc > 0) {
-        std::string name;
-        std::cout << "Please input your name: ";
-        std::cin >> name;
+        std::string name = "client";
+        std::string serverip;
+        std::cout << "Please input the ip of the server:(like x.x.x.x)";
+        std::cin >> serverip;
 
         muduo::net::EventLoopThread loopThread;
         // uint16_t port = static_cast<uint16_t>(atoi(argv[2]));
         // muduo::net::InetAddress serverAddr(argv[1], port);
-        muduo::net::InetAddress serverAddr("10.250.25.2", 12345);
+        muduo::net::InetAddress serverAddr(serverip.c_str(), 12345);
 
          // startloop会创建一个线程
         FileClient client(loopThread.startLoop(), serverAddr, name);
