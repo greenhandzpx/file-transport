@@ -16,13 +16,13 @@ in one terminal, and the other person in another terminal types:
 ```
 
 #### GO_VERSION:
-- b/s_version:
+##### b/s_version:
 I've also provided the compiled one, you can just type:
 ```
 ./file_transmit
 ```
 and then your partner can visit:`your ip address:9090`
-- c/s_version:
+##### c/s_version:
 just like the cpp_version, in one terminal, type:
 ```
 ./server
