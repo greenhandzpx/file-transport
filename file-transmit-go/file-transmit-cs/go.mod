@@ -1,0 +1,3 @@
+module FILE_TRANSMIT_CS
+
+go 1.17
